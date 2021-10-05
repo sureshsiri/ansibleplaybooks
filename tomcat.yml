@@ -2,8 +2,8 @@
 - hosts: Appservers
   become: true
   vars:
-   - tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.53/bin/apache-tomcat-9.0.53.tar.gz
-   - tomcat_package: apache-tomcat-9.0.53
+   - tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.71/bin/apache-tomcat-8.5.71.tar.gz
+   - tomcat_package: apache-tomcat-8.5.71
 
   tasks:
   - name: install java for tomcat
