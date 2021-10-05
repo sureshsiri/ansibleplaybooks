@@ -8,13 +8,6 @@
     become: yes
     tags:
       - install
-  - name: copying the html file
-    copy:
-      src: "/home/centos/index.html"
-      dest: "/var/www/html"
-    become: yes
-    tags:
-      - copy
   - name: startng apache
     service:
       name: httpd
@@ -22,10 +15,3 @@
     become: yes
     tags:
       - start
-  - name: uninstalling the apche
-    yum:
-      name: httpd
-      state: absent
-    become: yes
-    tags:
-      - uninstall
