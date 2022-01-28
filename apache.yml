@@ -1,4 +1,7 @@
-- name: Install Apache
+---
+- hosts: all
+  tasks:
+  - name: Install Apache
     yum: 
       name: httpd
       state: installed
@@ -19,3 +22,17 @@
     become: yes
     tags:
       - start
+  - name: stop the Apache
+    service:
+      name: httpd
+      state: stopped
+    become: yes
+    tags:
+      - stop    
+  - name: uninstall Apache
+    yum:
+      name: httpd
+      state: absent
+    become: yes
+    tags:
+      - uninstall
