@@ -1,17 +1,21 @@
----
-- hosts: Application
-  tasks:
-  - name: Installing Apache
-    yum:
+- name: Install Apache
+    yum: 
       name: httpd
       state: installed
+    become: yes 
+    tags:
+      - install    
+  - name: copy the index.html file
+    copy:
+      src: index.html
+      dest: /var/www/html/
     become: yes
     tags:
-      - install
-  - name: startng apache
+      - copy    
+  - name: Starting Apache
     service:
       name: httpd
-      state: started
+      state: started 
     become: yes
     tags:
       - start
