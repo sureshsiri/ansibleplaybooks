@@ -7,3 +7,5 @@
 [Application]
 10.0.0.242 ansible_user=ec2-user
 10.0.0.194 ansible_user=ec2-user
+[App]
+13.232.191.132 ansible_user=ec2-user
