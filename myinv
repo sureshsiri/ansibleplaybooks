@@ -2,8 +2,9 @@
 172.31.35.192 ansible_user=ec2-user
 172.31.47.50 ansible_user=ec2-user
 [Appservers]
-10.0.0.82 ansible_user=ec2-user
-10.0.0.62 ansible_user=ec2-user 
+10.0.0.26 ansible_user=ec2-user
+10.0.0.152 ansible_user=ec2-user
+10.0.0.51 ansible_user=ec2-user
 [Application]
 10.0.0.242 ansible_user=ec2-user
 10.0.0.194 ansible_user=ec2-user
